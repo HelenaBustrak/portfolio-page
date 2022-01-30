@@ -1,0 +1,38 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 30px auto 0;
+
+    label {
+        margin: 0.5em 0;
+        font-weight: bold;
+        color: getColour(green);
+    }
+
+    input, textarea {
+        width: 100%;
+        border-style: hidden;
+        padding: 15px;
+        box-shadow: getColour(shadow-two);
+        border-radius: 7px;
+        margin-top: 7px;
+        outline: none;
+    }
+
+    .submit {
+        margin: 3em auto;
+        border-style: hidden;
+        cursor: pointer;
+        
+    }
+
+    .form-error {
+        display: none;
+        color: #bb0707;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+
+    
+}

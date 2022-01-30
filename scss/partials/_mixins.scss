@@ -1,0 +1,18 @@
+$breakpoints: (
+    medium: 768px,
+    large: 1020px,
+    x-large: 1600px,
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+};
+
+@mixin background-image-style($url) {
+    background-image: $url;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+}

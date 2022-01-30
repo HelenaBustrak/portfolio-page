@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="widt=device-width, initial-scale=1.0" /> 
+        <title>Portfolio - Helena Holte Bustrak - Contact</title>
+        <script src="https://kit.fontawesome.com/d59b0ec7f2.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+        <header>
+            <label class="label-hamburger" for="hamburger-menu">
+                <div class="mobile-menu">
+                    <div class="mobile-menu__bars">
+                        
+                    </div>
+                </div>
+            </label>
+            <input type="checkbox" id="hamburger-menu">
+        
+            <section class="navigation">
+                
+                <div id="potrait">
+
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="contact.html" class="current">Contact</a></li>
+
+                    </ul>
+                </nav>
+
+                <div class="socials">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-github"></i>
+                </div>
+            </section>
+        </header>
+
+        <main>
+    
+            <div class="heading-image">
+                <h1 class="heading-sub-page">Contact</h1>
+            </div>
+
+            <div class="container">
+                <p class="p-contact">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Consectetur libero id faucibus nisl. Quis hendrerit dolor magna eget.</p>
+            
+            <form>
+                <label for="name">Name
+                   <input type="text" name="name" id="name">
+                </label>
+                <div class="form-error" id="nameError">Please enter your name</div>
+                <label for="email">Email
+                    <input type="email" name="email" id="email">
+                </label>
+                <div class="form-error" id="emailError">Please enter a valid email adress</div>
+                
+                <label for="subject">Subject
+                    <input type="text" name="subject" id="subject">
+                </label>
+                <div class="form-error" id="subjectError">Please enter a subject</div>
+                
+                <label for="message">Message
+                    <textarea name="message" id="message" rows="10"></textarea>
+                </label>
+                <div class="form-error" id="messageError">Please write a message</div>
+                
+                <button type="submit" class="button submit">Send Message</button>
+            </form>
+            </div>
+            
+        </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    </body>
+</html>

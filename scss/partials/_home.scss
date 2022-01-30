@@ -1,0 +1,59 @@
+.home-body {
+    background-color: getColour(beige);
+}
+
+.main-home {
+    height: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('../../images/forest-background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+
+    @include breakpoint(large) {
+        padding-top: 200px;
+    }
+
+    .main-heading {
+        margin-bottom: 0;
+        font-size: 70px;
+        padding: 0;
+
+        @include breakpoint(large) {
+            margin-bottom: 0;
+            font-size: 120px;
+        }
+
+        @include breakpoint(x-large) {
+            font-size: 150px;
+        }
+
+        
+    }
+
+    .main-paragraph {
+        text-align: center;
+        margin: 0 20px;
+        margin-bottom: 2em;
+        max-width: 400px;
+        text-shadow: getColour(shadow);
+
+        @include breakpoint(large) {
+            font-size: 20px;
+            max-width: 500px;
+            text-shadow: getColour(shadow-three);
+        }
+        
+    }
+
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+
+.paragraph-one {
+    color: getColour(primary);
+    font-size: 22px;
+    
+}
+
+hr {
+    color: rgba(255, 255, 255, 0.575);
+    border-style: none;
+}
+
+.design-icons {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    box-shadow: getColour(shadow-two);
+}
+
+.responsive-design {
+    @include background-image-style(url('../../images/responsive-design.png'));
+    
+}
+
+.ui-design {
+    @include background-image-style(url('../../images/ui-design.png'));
+} 
+
+.ux-design {
+    @include background-image-style(url('../../images/ux-design.png'));
+}
+
+.ways-to-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+    @include breakpoint(large) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
+
+    .way-to-help {
+        margin: 0 1em 3em;
+
+       
+    }
+
+    p {
+        max-width: 350px;
+        font-size: 17px;
+        
+        @include breakpoint(large) {
+            max-width: 300px;
+        }
+    }
+}

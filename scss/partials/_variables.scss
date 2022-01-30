@@ -1,0 +1,20 @@
+$font-primary: "Rubik", sans-serif;
+$font-headings: "Licorice", cursive;
+
+
+$colours: (
+    primary: #783A64,
+    secondary: white,
+    green: #53643B,
+    light-green: #9AA787,
+    beige: #EFECE3,
+    shadow: 0px 3px 6px #000000,
+    shadow-two: 0px 3px 6px #00000059,
+    shadow-three: 0px 3px 6px #000000b2
+
+);
+
+@function getColour($colour) {
+    @return map-get($colours, $colour);
+}
+

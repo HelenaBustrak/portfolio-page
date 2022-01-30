@@ -1,0 +1,164 @@
+header {
+    position: relative;
+    padding: 20px 0;
+
+    @include breakpoint(large) {
+        padding: 40px 0;
+    }
+}
+
+
+.navigation {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: getColour(beige);
+    z-index: 1;
+    
+    @include breakpoint(large) {
+        display: block;
+        position: sticky;
+        top: 50px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        @include breakpoint(large) {
+            margin-top: 20px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: getColour(green);
+        font-size: 25px; 
+    }
+
+    li {
+        margin: 1.8em 0;
+        
+    }
+
+    .current {
+        color: getColour(primary);
+        font-weight: bold;
+        
+    }
+
+    a:hover {
+        font-weight: bold;
+    }
+
+    
+}
+
+.mobile-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    &__bars {
+        width: 40px;
+        height: 6px;
+        background: getColour(green);
+        transition: all 0.5s ease-in-out;
+    }
+
+    &__bars::before,
+    &__bars::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 6px;
+        background: getColour(green);
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    &__bars::before {
+        transform: translateY(-14px);
+    }
+
+    &__bars::after {
+        transform: translateY(14px);
+    }
+
+}
+
+.mobile-menu.open .mobile-menu__bars {
+    transform: translateX(-40px);
+    background: transparent;
+}
+
+.mobile-menu.open .mobile-menu__bars::before {
+    transform: rotate(45deg) translate(30px, -30px);
+}
+
+.mobile-menu.open .mobile-menu__bars::after {
+    transform: rotate(-45deg) translate(30px, 30px);
+}
+
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:checked ~ .navigation {
+    display: block;
+}
+
+.label-hamburger {
+
+    @include breakpoint(large) {
+        display: none;
+    }
+}
+
+
+#potrait {
+    background-image: url('../../images/potrait.jpg');
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin: 3em auto;
+    box-shadow: getColour(shadow-two);
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0;
+
+    @include breakpoint(large) {
+        text-align: center;
+        margin-top: 350px;
+        margin-bottom: 50px;
+    }
+
+    .fab {
+        margin: 0 0.3em;
+        font-size: 2em;
+        color: getColour(primary);
+    }
+
+
+}
+
+
+
